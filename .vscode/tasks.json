@@ -1,0 +1,59 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "build",
+			"type": "shell",
+			"command": "dotnet",
+			"args": [
+				"build",
+				"TransactionalSessionAnalyzer.sln"
+			],
+			"group": "build",
+			"problemMatcher": [
+				"$msCompile"
+			]
+		},
+		{
+			"label": "build-release",
+			"type": "shell",
+			"command": "dotnet",
+			"args": [
+				"build",
+				"TransactionalSessionAnalyzer.sln",
+				"--configuration",
+				"Release"
+			],
+			"group": "build",
+			"problemMatcher": [
+				"$msCompile"
+			]
+		},
+		{
+			"label": "test",
+			"type": "shell",
+			"command": "dotnet",
+			"args": [
+				"test",
+				"TransactionalSessionAnalyzer.Test/TransactionalSessionAnalyzer.Test.csproj"
+			],
+			"group": "test",
+			"problemMatcher": [
+				"$msCompile"
+			]
+		},
+		{
+			"label": "demo",
+			"type": "shell",
+			"command": "dotnet",
+			"args": [
+				"build",
+				"DemoProject/DemoProject.csproj"
+			],
+			"group": "build",
+			"problemMatcher": [
+				"$msCompile"
+			]
+		}
+	]
+}
